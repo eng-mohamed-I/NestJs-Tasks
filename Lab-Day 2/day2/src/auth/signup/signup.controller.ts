@@ -10,6 +10,4 @@ export class SignupController {
     signUp(@Body() body : SignUpDTO){ 
       return this._signupService.addUser(body)
     }
-
-
 }
