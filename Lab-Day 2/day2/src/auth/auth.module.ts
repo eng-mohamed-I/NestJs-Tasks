@@ -8,10 +8,11 @@ import { SigninController } from './signin/signin/signin.controller';
 import { SigninService } from './signin/signin/signin.service';
 import { SignupController } from './signup/signup.controller';
 import { SignupService } from './signup/signup.service';
+import { JwtService } from '@nestjs/jwt';
 
 @Module({
   imports: [MongooseModule.forFeature([{name: User.name, schema: userSchema}])],
   controllers: [SigninController,SignupController],
-  providers: [SigninService,SignupService]
+  providers: [SigninService,SignupService,JwtService]
 })
 export class AuthModule {}

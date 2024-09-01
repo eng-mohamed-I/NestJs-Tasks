@@ -12,3 +12,4 @@ export class User {
     @MinLength(5)
     password: string
 }  
+

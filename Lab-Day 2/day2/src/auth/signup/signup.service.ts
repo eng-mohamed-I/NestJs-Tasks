@@ -1,9 +1,12 @@
 import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
 import { SignUpDTO } from '../dto/auth.dto';
-import { User } from 'src/dto/auth.dto';
+// import { User } from 'src/dto/auth.dto';
+
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
 import * as bcrypt from "bcrypt"
+import { User } from 'src/core/schemas/user.schema';
+
 @Injectable()
 export class SignupService {
     constructor(@InjectModel(User.name) private userModel: Model<User> ){}
