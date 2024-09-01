@@ -15,3 +15,15 @@ export class SignUpDTO {
     @IsString()
     password: string;
 }
+
+
+export class SignInDTo  {
+    @IsNotEmpty()
+    @IsString()
+    @IsEmail()
+    email: string;
+
+    @IsNotEmpty()
+    @IsString()
+    password: string;
+}
